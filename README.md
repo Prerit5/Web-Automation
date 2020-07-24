@@ -3,7 +3,7 @@ Snippets of Google Apps Script code based on JavaScript used in automating vario
 
 The scripts can be used by Opening a Google Sheet, clicking on "Tools" and clicking on "Script Editor". Some scripts require to authorise permissions before running.
 
-# emailcompare.js
+# emailcompare.gs
 A Google Apps Script based on JavaScript used to automate the process of sending Email-IDs and passwords to an organisation's employees.
 
 A google form has been created which stores the responses in a spreadsheet in the same Worksheet as the .CSV containing new @organisation email-ids and passwords with the employees old email-ids.
