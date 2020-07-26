@@ -1,10 +1,10 @@
-var ssID = "";
-var formID = "";
+var ssID = "ID"; //Worksheet ID
+var formID = "ID"; //Form ID
 
-var wsData = SpreadsheetApp.openById(ssID).getSheetByName("Mentors");
-var form = FormApp.openById(formID);
+var wsData = SpreadsheetApp.openById(ssID).getSheetByName("Employee"); //Open by Name of Spreadsheet
+var form = FormApp.openById(formID); //Open by ID of form
 
-var numRows = wsData.getLastRow();
+var numRows = wsData.getLastRow(); //Get number of employees by checking last row of the spreadsheet
 
 var cell=[];
 var result=[]; 
@@ -18,8 +18,9 @@ function main() {
 
   GetCellColorCode();
   
+  //Checking the status of an employee by the background color of thier row in the spreadsheet
   for(i=0;i<numRows-1;i++){
-     if(result[i]=="#00ff00"){
+     if(result[i]=="#00ff00"){  //Green color is used for qualified employees
        mnamew[i] = mnames[i];
        email[i] = wsData.getRange(i+2, 2).getValues();
      }    
@@ -34,6 +35,7 @@ function main() {
   });
   
   mnamew.sort(); 
+  //DEBUG
   //Logger.log(mnamew);
   //Logger.log(email);
   //var items = form.getItems();
@@ -43,11 +45,11 @@ function main() {
 }
 
 function mlist(){
-    mnames = wsData.getRange(2, 1, numRows-1).getValues();
+    mnames = wsData.getRange(2, 1, numRows-1).getValues(); //Defining range
 }
 
 
-function GetCellColorCode() 
+function GetCellColorCode() //to get the background color of a particular cell in the spreadsheet 
 { 
   for(i=0;i<numRows-1;i++){
     cell[i] = wsData.getRange(i+2, 1, numRows);
@@ -56,7 +58,8 @@ function GetCellColorCode()
   }
 }
 
+
 function updateDD(values) {
-  var item = form.getItemById(973817562);
+  var item = form.getItemById(ID); //ID of the question in the form
   item.asListItem().setChoiceValues(values);
 }
