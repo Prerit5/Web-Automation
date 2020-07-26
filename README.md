@@ -3,7 +3,7 @@ Snippets of Google Apps Script code based on JavaScript used in automating vario
 
 The scripts can be used by Opening a Google Sheet, clicking on "Tools" and clicking on "Script Editor". Some scripts require to authorise permissions before running.
 
-# EmployeeStatus.gs
+# employee_status.gs
 
 This script reads a spreadsheet with details of employees. Each row is highlighted using different colors, the background color denotes the title of the employee in the company.
 
@@ -11,7 +11,7 @@ A google form is created which includes a dropdown menu with the names of the em
 
 The script filters the data from the sheet and contineously updated the dropdown menu with names of the employees in the required position.
 
-# emailemployee.gs
+# email_employee.gs
 
 An organisation has created a google form for users to file quries with the names of employees which a user can select from a drop-down menu. A Google WorkSheet is used to Store names and email-ids of the employees, another spreedsheet in the same worksheet is used to record user responses from the form.
 
@@ -21,7 +21,7 @@ If a match is found, complete details of the enquiry will be sent to the employe
 
 If no employee is selected, the script will send an email to a specified email address to redirect the request manually.
 
-# emailcompare.gs
+# email_compare.gs
 
 A Google Apps Script based on JavaScript used to automate the process of sending Email-IDs and passwords to an organisation's employees.
 
