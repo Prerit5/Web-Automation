@@ -1,5 +1,5 @@
-var ssID = "12uqLkh5OJ_ggQ8Q6NYCTI2p4vRAmNdhxXw93hmZL8q0";
-var formID = "1bfYXZce9KGoi8Z4Ds7An7J7X8s77Fg6tOrvFDBNe5kY";
+var ssID = "";
+var formID = "";
 
 var wsData = SpreadsheetApp.openById(ssID).getSheetByName("Mentors");
 var form = FormApp.openById(formID);
