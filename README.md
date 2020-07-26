@@ -3,15 +3,13 @@ Snippets of Google Apps Script code based on JavaScript used in automating vario
 
 The scripts can be used by Opening a Google Sheet, clicking on "Tools" and clicking on "Script Editor". Some scripts require to authorise permissions before running.
 
-# emailcompare.gs
+# EmployeeStatus.gs
 
-A Google Apps Script based on JavaScript used to automate the process of sending Email-IDs and passwords to an organisation's employees.
+This script reads a spreadsheet with details of employees. Each row is highlighted using different colors, the background color denotes the title of the employee in the company.
 
-A google form has been created which stores the responses in a spreadsheet in the same Worksheet as the .CSV containing new @organisation email-ids and passwords with the employees old email-ids.
+A google form is created which includes a dropdown menu with the names of the employee with a certian title.
 
-An employee fills out the form using their old email-id, the email-id is recorded and then compared with the email-ids in the 2nd spreadsheet.
-
-If a match is found, the script reads the row in which the match has been found and sends an email on the old email-id containing the new email id and its password.
+The script filters the data from the sheet and contineously updated the dropdown menu with names of the employees in the required position.
 
 # emailemployee.gs
 
@@ -22,3 +20,14 @@ The script is used to store user responses and send an automated email to the se
 If a match is found, complete details of the enquiry will be sent to the employee selected in the form.
 
 If no employee is selected, the script will send an email to a specified email address to redirect the request manually.
+
+# emailcompare.gs
+
+A Google Apps Script based on JavaScript used to automate the process of sending Email-IDs and passwords to an organisation's employees.
+
+A google form has been created which stores the responses in a spreadsheet in the same Worksheet as the .CSV containing new @organisation email-ids and passwords with the employees old email-ids.
+
+An employee fills out the form using their old email-id, the email-id is recorded and then compared with the email-ids in the 2nd spreadsheet.
+
+If a match is found, the script reads the row in which the match has been found and sends an email on the old email-id containing the new email id and its password.
+
